@@ -1,11 +1,26 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
+const path = require('path');
 
-/**
- * Metro configuration
- * https://reactnative.dev/docs/metro
- *
- * @type {import('metro-config').MetroConfig}
- */
-const config = {};
+const projectRoot = __dirname;
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+const config = {
+  resolver: {
+    extraNodeModules: {
+      '@tamagui/core': path.resolve(projectRoot, 'node_modules/@tamagui/core'),
+      '@tamagui/config': path.resolve(
+        projectRoot,
+        'node_modules/@tamagui/config',
+      ),
+      '@tamagui/react-native-config': path.resolve(
+        projectRoot,
+        'node_modules/@tamagui/react-native-config',
+      ),
+    },
+  },
+  watchFolders: [
+    path.resolve(projectRoot, 'node_modules/@tamagui/core'),
+    path.resolve(projectRoot, 'node_modules/@tamagui/config'),
+  ],
+};
+
+module.exports = mergeConfig(getDefaultConfig(projectRoot), config);
