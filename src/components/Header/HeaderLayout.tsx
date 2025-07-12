@@ -75,7 +75,7 @@ export const HeaderLayout = ({
       </XStack>
 
       <YStack mt="$2" mb="$2">
-        <Text fontSize="$5" color="$colorPress">
+        <Text fontSize="$5" color="$color">
           What's your favorite game to play?
         </Text>
       </YStack>

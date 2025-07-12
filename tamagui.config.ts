@@ -72,7 +72,6 @@ export const fonts = {
   }),
 };
 
-// Extend themes to include missing tokens
 const customThemes = {
   light: {
     ...themes.light,
@@ -83,6 +82,7 @@ const customThemes = {
     blue10: '#007bff',
     purple: '#FF30E3',
     darkPurple: '#d23ebe',
+    colorPress: '#e0e0e0',
   },
   dark: {
     ...themes.dark,
@@ -93,6 +93,7 @@ const customThemes = {
     blue10: '#1e90ff',
     purple: '#FF30E3',
     darkPurple: '#d23ebe',
+    colorPress: '#333333',
   },
 };
 

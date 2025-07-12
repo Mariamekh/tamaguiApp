@@ -49,7 +49,7 @@ export const SliderItem = ({
         />
       ) : (
         <View
-          p="absolute"
+          p="auto"
           {...StyleSheet.absoluteFillObject}
           backgroundColor="$colorPress"
           justifyContent="center"
