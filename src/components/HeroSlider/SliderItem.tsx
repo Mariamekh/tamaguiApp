@@ -54,7 +54,7 @@ export const SliderItem = ({
           backgroundColor="$colorPress"
           justifyContent="center"
           alignItems="center">
-          <Text color="white" fontWeight="600" fontSize="$6">
+          <Text color="$white" fontWeight="600" fontSize="$6">
             Failed to load image
           </Text>
         </View>
@@ -69,10 +69,14 @@ export const SliderItem = ({
           padding: 16,
           backgroundColor: 'rgba(0, 0, 0, 0.4)',
         }}>
-        <Text fontSize="$8" fontWeight="800" color="white">
+        <Text
+          fontFamily="$silkscreen"
+          fontSize="$6"
+          fontWeight="800"
+          color="$white">
           {item.title}
         </Text>
-        <Text fontSize="$6" color="white" my="$2">
+        <Text fontSize="$5" color="$white" my="$2">
           {item.subtitle}
         </Text>
       </Animated.View>
@@ -87,7 +91,7 @@ export const SliderItem = ({
           right={0}
           bottom={0}
           backgroundColor="rgba(0,0,0,0.3)">
-          <Spinner testID="loading-spinner" size="large" color="white" />
+          <Spinner testID="loading-spinner" size="large" color="$white" />
         </View>
       )}
 
@@ -95,13 +99,14 @@ export const SliderItem = ({
         borderRadius="$10"
         backgroundColor="$purple"
         size="$4"
-        color="white"
-        fontSize="$4"
+        color="$white"
         fontWeight="600"
         onPress={onPress}
         position="absolute"
         bottom="$4"
         alignSelf="center"
+        fontFamily="$silkscreen"
+        fontSize="$4"
         zIndex={2}>
         {item.cta}
       </Button>

@@ -1,7 +1,6 @@
 import {Text, XStack, YStack, Spinner, Button, Avatar} from 'tamagui';
 import {Bell, Menu, RefreshCcw} from '@tamagui/lucide-icons';
 import {ThemeToggle} from '../ThemeToggle/ThemeToggle';
-
 interface Props {
   userName: string;
   displayedBalance: number;
@@ -47,11 +46,11 @@ export const HeaderLayout = ({
         padding="$2"
         elevation="$2">
         <XStack alignItems="center" flexDirection="column">
-          <Text fontWeight="700" fontSize="$8" color="white">
+          <Text fontFamily="$silkscreen" fontSize="$6" color="$white">
             Welcome Back, {userName}!
           </Text>
           <XStack alignItems="center">
-            <Text fontSize="$5" fontWeight="600" color="white">
+            <Text fontSize="$5" fontWeight="600" color="$white">
               Balance: ${displayedBalance.toFixed(2)}
             </Text>
             <Button
@@ -60,7 +59,7 @@ export const HeaderLayout = ({
               icon={
                 isLoading
                   ? () => (
-                      <Spinner testID="spinner" size="small" color="white" />
+                      <Spinner testID="spinner" size="small" color="$white" />
                     )
                   : RefreshCcw
               }
@@ -68,7 +67,7 @@ export const HeaderLayout = ({
               bg="$darkPurple"
               borderColor="$darkPurple"
               borderWidth={1}
-              color="white"
+              color="$white"
             />
           </XStack>
         </XStack>

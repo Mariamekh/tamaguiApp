@@ -28,8 +28,6 @@ yarn start
 
 # run the app (iOS or Android)
 yarn ios
-# or
-yarn android
 ```
 
 ## 🧪 Run Tests
@@ -65,4 +63,5 @@ HeroSlider: Autoplaying image carousel with slide indicators and CTA.
 ThemeToggle: Icon-based light/dark switcher.
 
 ConfettiOverlay: Fires celebratory confetti on event triggers.
+
 # tamaguiApp

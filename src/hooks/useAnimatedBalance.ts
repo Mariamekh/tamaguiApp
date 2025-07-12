@@ -18,6 +18,7 @@ export const useAnimatedBalance = (balance: number): number => {
     const id = animatedValue.addListener(({value}) => {
       setDisplayedBalance(Math.round(value));
     });
+
     return () => animatedValue.removeListener(id);
   }, []);
 

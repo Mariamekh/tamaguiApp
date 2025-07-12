@@ -70,6 +70,23 @@ export const fonts = {
       5: '700',
     },
   }),
+  silkscreen: createFont({
+    family: 'Silkscreen',
+    size: {
+      4: 16,
+      5: 18,
+      6: 20,
+    },
+    weight: {
+      4: '400',
+      7: '700',
+    },
+    lineHeight: {
+      4: 22,
+      5: 26,
+      6: 30,
+    },
+  }),
 };
 
 const customThemes = {
@@ -83,6 +100,7 @@ const customThemes = {
     purple: '#FF30E3',
     darkPurple: '#d23ebe',
     colorPress: '#e0e0e0',
+    $white: '#FFFFFF',
   },
   dark: {
     ...themes.dark,
@@ -94,6 +112,7 @@ const customThemes = {
     purple: '#FF30E3',
     darkPurple: '#d23ebe',
     colorPress: '#333333',
+    $white: '#FFFFFF',
   },
 };
 

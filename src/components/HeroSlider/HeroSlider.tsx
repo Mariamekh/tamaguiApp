@@ -24,7 +24,7 @@ export const HeroSlider = () => {
   };
 
   return (
-    <YStack backgroundColor={slides.length ? '$background' : '#fff'}>
+    <YStack backgroundColor={slides.length ? '$background' : '$white'}>
       <Carousel
         loop
         autoPlay={!isPaused}
