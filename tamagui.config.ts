@@ -1,8 +1,5 @@
 import {media, shorthands, themes, tokens} from '@tamagui/config/v4';
-import {createTamagui} from '@tamagui/core';
-
-import {createFont} from '@tamagui/core';
-
+import {createTamagui, createFont} from '@tamagui/core';
 import {createAnimations} from '@tamagui/animations-css';
 
 export const animations = createAnimations({
@@ -39,7 +36,6 @@ export const fonts = {
       10: 46,
     },
   }),
-
   heading: createFont({
     family: `Helvetica`,
     size: {
@@ -76,6 +72,30 @@ export const fonts = {
   }),
 };
 
+// Extend themes to include missing tokens
+const customThemes = {
+  light: {
+    ...themes.light,
+    backgroundStrong: '#f0f0f0',
+    color: '#000',
+    gray8: '#888',
+    gray10: '#666',
+    blue10: '#007bff',
+    purple: '#FF30E3',
+    darkPurple: '#d23ebe',
+  },
+  dark: {
+    ...themes.dark,
+    backgroundStrong: '#1a1a1a',
+    color: '#fff',
+    gray8: '#444',
+    gray10: '#333',
+    blue10: '#1e90ff',
+    purple: '#FF30E3',
+    darkPurple: '#d23ebe',
+  },
+};
+
 const config = createTamagui({
   defaultFont: 'body',
   animations,
@@ -83,7 +103,7 @@ const config = createTamagui({
   themeClassNameOnRoot: true,
   shorthands,
   fonts,
-  themes,
+  themes: customThemes,
   tokens,
   media,
 });

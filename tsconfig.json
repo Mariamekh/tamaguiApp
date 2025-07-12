@@ -10,7 +10,7 @@
     "noEmit": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
-    "types": ["react", "react-native"]
+    "types": ["react", "react-native", "jest"]
   },
   "exclude": [
     "node_modules",

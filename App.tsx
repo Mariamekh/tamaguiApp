@@ -1,20 +1,25 @@
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {TamaguiProvider, Theme} from 'tamagui';
+import {TamaguiProvider, Theme, YStack} from 'tamagui';
 import config from './tamagui.config';
-import HomeScreen from './src/screens/HomeScreen';
-import {useState} from 'react';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {HomeScreen} from './src/screens/HomeScreen';
+import {useColorScheme} from './src/hooks/useColorScheme';
 
 export function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const {theme, setTheme} = useColorScheme();
 
   return (
-    <SafeAreaProvider>
-      <TamaguiProvider config={config}>
-        <Theme name={theme}>
-          <HomeScreen setTheme={setTheme} theme={theme} />
-        </Theme>
-      </TamaguiProvider>
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <SafeAreaProvider>
+        <TamaguiProvider config={config}>
+          <Theme name={theme}>
+            <YStack flex={1} backgroundColor="$background">
+              <HomeScreen theme={theme} setTheme={setTheme} />
+            </YStack>
+          </Theme>
+        </TamaguiProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
 
